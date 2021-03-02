@@ -10,6 +10,7 @@ function App() {
       <Header />
       <Home />
       <Hero />
+      <img src={require('/assets/icons/search.png')} />
     </div>
   );
 }
