@@ -1,0 +1,25 @@
+.header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.header nav ul{
+    display:flex;
+}
+.header nav ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header ul li a{
+   margin: 0 15px;
+   text-decoration: none;
+   color: black;
+   letter-spacing: 1.2px;
+}
+.header a:hover{
+color:#5f9ea0;
+}
