@@ -1,3 +1,9 @@
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .navigation{
     display: flex;
     flex-direction: row;
@@ -15,4 +21,27 @@
     text-decoration: none;
     color: black;
     letter-spacing: 1.2px;
+}
+.search-row {
+    font-size: 23px;
+    padding: 6px;
+    margin-right: 10px;
+    color:gray;
+}
+.search-row input{
+    padding: 5px;
+}
+.searchInput{
+    border: 0;
+    width:0;
+    transition:width 0.1s ease-in;
+}
+.searchInput:focus{
+    outline: none;
+}
+.searchInput.active{
+    width:150px;
+}
+.fa-search{
+    cursor: pointer;
 }

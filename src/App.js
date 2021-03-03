@@ -3,15 +3,22 @@ import './App.css';
 import Home from './containers/Home'
 import Header from './components/Header/index.js'
 import Hero from './components/Hero/index.js'
+import Contact from './containers/Contact/index.js'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Post from './containers/Post/index.js';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <Hero />
-      <img src={require('/assets/icons/search.png')} />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Hero />
+
+        <Route path="/" exact component={Home}/>
+        <Route path="/contact" component={Contact} />
+        <Route path="/post" component={Post} />
+      </div>
+    </Router>
   );
 }
 
