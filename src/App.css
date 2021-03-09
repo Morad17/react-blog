@@ -9,3 +9,15 @@ body{
   margin: 0 auto;
   border: 1px solid #333;
 }
+
+/*----Global Css Shortcuts----*/
+
+.center{
+  text-align: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.bold{
+  font-weight:600;
+}

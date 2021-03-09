@@ -1,4 +1,24 @@
-.sidebar{
+.sidebarContainer{
     width:27%;
-    background: #fff;
+}
+
+.cardHeader{
+    text-transform: capitalize;
+    font-size: 1.5em;
+    text-align:center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    color:#565673;
+    font-weight:600;
+}
+
+.profileImage{
+    width:100%;
+    box-sizing: border-box;
+}
+.profileImage img{
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 50%;
 }
