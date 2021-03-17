@@ -9,9 +9,10 @@ import Sidebar from '../../components/Sidebar/index.js'
 **/
 
 const Post = (props) => {
+
   return(
     <section className="container">
-        <BlogPost />
+        <BlogPost {...props} />
         <Sidebar />
     </section>
    )
