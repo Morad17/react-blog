@@ -10,30 +10,29 @@ import blogPost from '../../data/blog.json'
 
 const BlogPost = (props) => {
 
-  const [post,setPost] = useState({
-    id: 1,
-    blogCategory:"",
-    blogTitle:"",
-    postedOn:"",
-    author:"",
-    blogImage:"",
-    blogText:"",
-  })
-  const [slug, setSlug] = useState("")
+    const [post, setPost] = useState({
+      id: "",
+      blogCategory:"",
+      blogTitle:"",
+      postedOn:"",
+      author:"",
+      blogImage:"",
+      blogText:"",
+    });
+    const [slug, setSlug] = useState('');
 
 
-  useEffect(() => {
-    const slug = props.match.params.slug;
-    const post = blogPost.data.find(post => post.slug == slug)
-    setPost(post);
-    setSlug(slug)
-  }, [post, props.match.params.slug]);
-
-  // if(post.blogImage === "") return null;
+    useEffect(() => {
+      const slug = props.match.params.slug;
+      const post = blogPost.data.find(post => post.slug == slug);
+      setPost(post);
+      setSlug(slug)
+    }, [post, props.match.params.slug]);
 
   return(
         <div className="blogPostContainer">
           <Card>
+            
             <div className="blogHeader">
             <span className="blogCategory">{post.blogCategory}</span>
             <h1 className="postTitle">{post.blogTitle}</h1>

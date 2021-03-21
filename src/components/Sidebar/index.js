@@ -10,13 +10,14 @@ import blogPost from '../../data/blog.json';
 
 const Sidebar = (props) => {
 
-  const [posts,setPosts] = useState([])
+    const [posts,setPosts] = useState([])
+  ;
+    useEffect(() => {
+        const posts = blogPost.data;
+        setPosts(posts);
+    }, [posts]);
 
-  useEffect(() => {
-      const posts = blogPost.data
-      setPosts(posts);
-  }, [posts]);
-
+    
   return(
     <div className="sidebarContainer">
       <Card style={{ marginBottom:'20px', padding:'10px', boxSizing:'border-box'}}>
@@ -51,7 +52,7 @@ const Sidebar = (props) => {
                   <span>{post.postedOn}</span>
                 </div>
                 </NavLink>
-                    )
+                    );
             })
           }
         </div>
@@ -59,8 +60,8 @@ const Sidebar = (props) => {
     </div>
 
 
-    
-   )
+      
+    )
   }
 
 
